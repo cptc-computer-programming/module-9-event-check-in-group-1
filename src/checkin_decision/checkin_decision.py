@@ -15,10 +15,10 @@ This module is your team's workspace for quoted-amount and status-code decisions
 # 5. Get instructor approval for both contracts.
 #
 # Data contract template for Function 1:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
+# Function name: calculate_final_amount
+# Purpose: check the total amount to be paid
+# Parameters: subtotal , service fee , discount 
+# Returns: 
 # Possible return values:
 # Assumptions:
 # Example call:
