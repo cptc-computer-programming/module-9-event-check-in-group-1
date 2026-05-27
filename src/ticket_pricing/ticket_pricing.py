@@ -49,7 +49,8 @@ def ticket_rate(is_student, is_veteran, age):
         per_person_rate = 14.00
     return((per_person_rate))
 
-def calculate_subtotal(ticket_rate, reservation_size):
-    for i in range(reservation_size):
-        subtotal += float(ticket_rate)
+def calculate_subtotal(per_person_rate, reservation_size):
+    subtotal = 0.00
+    for _ in range(reservation_size):
+        subtotal += float(per_person_rate)
     return(subtotal)
