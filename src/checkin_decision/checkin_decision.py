@@ -30,10 +30,35 @@ This module is your team's workspace for quoted-amount and status-code decisions
 # Purpose: determine if the user can check in
 # Parameters: denied_capacity, ready, long_wait
 # Returns: final_status
-# Possible return values: denied_capacity, ready, long_wait
+# Possible return values: checking_permission, ready, long_wait
 # Assumptions:
 # Example call:
 # Example result:
 # Who might use this function? customer 
 #
 # TODO: After approval, write your two function definitions below.
+
+
+
+def calculate_total_amount(subtotal, discount , service_fee):
+    """This returns the final amount after subtacting the service fee and the discount"""
+    final_amount = subtotal - discount + service_fee
+    return final_amount
+
+
+def determine_permission_status(check_in_permitted, wait_time):
+    """This determines the final status of if the customer can check in"""
+    if not check_in_permitted:
+        return("DENIED_CAPACITY")
+    
+    short_wait = 15
+
+    if wait_time > short_wait:
+        return("LONG_WAIT")
+    else:
+        return("READY")
+
+
+
+
+
