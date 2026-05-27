@@ -15,25 +15,25 @@ This module is your team's workspace for discount and service-fee calculations.
 # 5. Get instructor approval for both contracts.
 #
 # Data contract template for Function 1:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
+# Function name: services_fee
+# Purpose: To determine the total fees for the the reservation.
+# Parameters: total_guests_in_reservation, is_online, subtotal
+# Returns: service_fee
+# Possible return values: 0 (0$) or maybe 5 (5$)
 # Assumptions:
 # Example call:
 # Example result:
-# Who might use this function?
+# Who might use this function? The team for Final Check-In Decision
 #
 # Data contract template for Function 2:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
+# Function name: discount_amount
+# Purpose: To determine the total discounts for the reservation.
+# Parameters: total_guests_in_reservation, is_online, subtotal
+# Returns: discount_amount
+# Possible return values: 0 (0$) or maybe -15 (-15$)
 # Assumptions:
 # Example call:
 # Example result:
-# Who might use this function?
+# Who might use this function? The team for Final Check-In Decision
 #
 # TODO: After approval, write your two function definitions below.

@@ -61,13 +61,30 @@ your function names, parameters, and return values, post the contracts for the
 class, and get approval before coding.
 
 ```text
-Function name:
-Purpose:
-Parameters:
-Returns:
-Possible return values:
+Function name: calculate_estimated_wait_time
+Purpose: number_of_seconds
+Parameters: number_of_ppl
+Returns: number_of_minutes
+Possible return values: 10 people = 450 seconds
 Assumptions:
 Example call:
 Example result:
 Who might use this function?
+
+Function name: determine_check_in_lane
+Purpose: Get the check in lane the reservation should use
+Parameters: is_priority
+Returns: Which check in lane reservation goes in (correct_lane)
+Possible return values: Priority, Standard
+Assumptions:
+Example call:
+Example result:
+Who might use this function?
+
+minutes = seconds // 60
+
+remainder = seconds % 60
+
+if remainder >= 30:
+  minutes += 1
 ```
