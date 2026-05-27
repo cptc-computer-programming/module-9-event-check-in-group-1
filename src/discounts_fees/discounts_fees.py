@@ -27,9 +27,9 @@ This module is your team's workspace for discount and service-fee calculations.
 #
 
 
-def service_fee(total_guests_in_reservation, is_online, subtotal):
+def service_fee(is_online, subtotal):
 
-    IS_ONLINE_FEE = 5
+    IS_ONLINE_FEE = .05
 
     service_fee_percent = 0
     returned_service_fee = 0
@@ -48,7 +48,7 @@ def service_fee(total_guests_in_reservation, is_online, subtotal):
 # Function name: discount_amount
 # Purpose: To determine the total discounts for the reservation.
 # Parameters: total_guests_in_reservation, is_online, subtotal
-# Returns: discount_amount
+# Returns: returned_discount_amount
 # Possible return values: 0 (0$) or maybe -15 (-15$)
 # Assumptions:
 # Example call:
@@ -57,6 +57,26 @@ def service_fee(total_guests_in_reservation, is_online, subtotal):
 #
 
 
+def discount_amount(total_guests_in_reservation, subtotal):
+
+    GROUP_OVER_TEN_DISCOUNT = .15
+    GROUP_OVER_FIVE_DISCOUNT = .10
+    OVER_TEN_LIMIT = 10
+    OVER_FIVE_LIMIT = 5
+    
+    discount_percentage = 0
+    returned_discount_amount = 0
+
+    if total_guests_in_reservation >= OVER_TEN_LIMIT:
+        discount_percentage = GROUP_OVER_TEN_DISCOUNT
+        returned_discount_amount = subtotal * discount_percentage
+    elif total_guests_in_reservation > OVER_FIVE_LIMIT:
+        discount_percentage = GROUP_OVER_FIVE_DISCOUNT
+        returned_discount_amount = subtotal * discount_percentage
+    else:
+        returned_discount_amount = subtotal * discount_percentage
+
+    return(returned_discount_amount)
 
 
 
