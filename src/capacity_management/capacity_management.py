@@ -38,12 +38,26 @@ This module is your team's workspace for occupancy and admission decisions.
 #
 # TODO: After approval, write your two function definitions below.
 
+# change number_ahead_in_queue -> guests_checked_in
+
 
 # Numeric percentage of event capacity
 def current_capacity(number_ahead_in_queue, event_capacity):
-    
+    if event_capacity <= 0:
+        return 0
+    return number_ahead_in_queue / event_capacity * 100
+
 
 # Decide whether a full reservation can check in
 def within_capacity(total_guests_in_reservation, number_ahead_in_queue, event_capacity):
-    
+    if event_capacity <= 0:
+        return False
+    return total_guests_in_reservation + number_ahead_in_queue <= event_capacity
 
+
+# Testing
+print(f"current_capacity(13, 20): {current_capacity(13, 20)}")
+print(f"current_capacity(20, 20): {current_capacity(20, 20)}")
+
+print(f"within_capacity(3, 13, 20): {within_capacity(3, 13, 20)}")
+print(f"within_capacity(8, 13, 20): {within_capacity(8, 13, 20)}")
