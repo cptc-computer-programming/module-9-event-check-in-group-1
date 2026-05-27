@@ -37,3 +37,13 @@ This module is your team's workspace for occupancy and admission decisions.
 # Who might use this function?
 #
 # TODO: After approval, write your two function definitions below.
+
+
+# Numeric percentage of event capacity
+def current_capacity(number_ahead_in_queue, event_capacity):
+    
+
+# Decide whether a full reservation can check in
+def within_capacity(total_guests_in_reservation, number_ahead_in_queue, event_capacity):
+    
+
