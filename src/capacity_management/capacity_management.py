@@ -15,10 +15,10 @@ This module is your team's workspace for occupancy and admission decisions.
 # 5. Get instructor approval for both contracts.
 #
 # Data contract template for Function 1:
-# Function name:
-# Purpose:
+# Function name: current_capacity
+# Purpose: Numeric percentage of event capacity
 # Parameters:
-# Returns:
+# Returns: float
 # Possible return values:
 # Assumptions:
 # Example call:
@@ -26,10 +26,10 @@ This module is your team's workspace for occupancy and admission decisions.
 # Who might use this function?
 #
 # Data contract template for Function 2:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
+# Function name: within_capacity
+# Purpose: Decide whether a full reservation can check in
+# Parameters: 
+# Returns: bool
 # Possible return values:
 # Assumptions:
 # Example call:
