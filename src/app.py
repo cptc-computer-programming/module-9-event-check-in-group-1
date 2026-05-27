@@ -7,12 +7,12 @@ def process_reservation(
     age,
     is_student,
     is_veteran,
-    reservation_size,
-    registered_online,
-    checked_in_count,
+    total_guests_in_reservation,
+    is_online,
+    total_checked_in,
     event_capacity,
     people_ahead,
-    seconds_per_person,
+    estimated_minutes_per_person,
     has_priority_pass,
 ):
     """Process one reservation and return its operations results.
@@ -50,24 +50,24 @@ def main():
     age = int(input("Reservation holder age: "))
     is_student = input("Is the reservation holder a student? (y/n): ").lower() == "y"
     is_veteran = input("Is the reservation holder a veteran? (y/n): ").lower() == "y"
-    reservation_size = int(input("Number of guests in the reservation: "))
-    registered_online = input("Was the reservation completed online? (y/n): ").lower() == "y"
-    checked_in_count = int(input("Number of guests already checked in: "))
+    total_guests_in_reservation = int(input("Number of guests in the reservation: "))
+    is_online = input("Was the reservation completed online? (y/n): ").lower() == "y"
+    total_checked_in = int(input("Number of guests already checked in: "))
     event_capacity = int(input("Maximum event capacity: "))
     people_ahead = int(input("Number of people ahead in line: "))
-    seconds_per_person = int(input("Estimated seconds to serve one person: "))
+    estimated_minutes_per_person = int(input("Estimated seconds to serve one person: "))
     has_priority_pass = input("Does the reservation holder have a priority pass? (y/n): ").lower() == "y"
 
     results = process_reservation(
         age,
         is_student,
         is_veteran,
-        reservation_size,
-        registered_online,
-        checked_in_count,
+        total_guests_in_reservation,
+        is_online,
+        total_checked_in,
         event_capacity,
         people_ahead,
-        seconds_per_person,
+        estimated_minutes_per_person,
         has_priority_pass,
     )
 
