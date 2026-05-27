@@ -17,9 +17,9 @@ This module is your team's workspace for occupancy and admission decisions.
 # Data contract template for Function 1:
 # Function name: current_capacity
 # Purpose: Numeric percentage of event capacity
-# Parameters:
+# Parameters: number_ahead_in_queue, event_capacity
 # Returns: float
-# Possible return values:
+# Possible return values: 0.0f-100.0f
 # Assumptions:
 # Example call:
 # Example result:
@@ -28,9 +28,9 @@ This module is your team's workspace for occupancy and admission decisions.
 # Data contract template for Function 2:
 # Function name: within_capacity
 # Purpose: Decide whether a full reservation can check in
-# Parameters: 
+# Parameters: total_guests_in_reservation, number_ahead_in_queue, event_capacity
 # Returns: bool
-# Possible return values:
+# Possible return values: True, False
 # Assumptions:
 # Example call:
 # Example result:
