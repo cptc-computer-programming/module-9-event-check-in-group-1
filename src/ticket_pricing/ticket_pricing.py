@@ -26,15 +26,15 @@ This module is your team's workspace for ticket-rate and reservation-subtotal wo
 # Who might use this function?
 #
 # Data contract template for Function 2:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
-# Assumptions:
-# Example call:
-# Example result:
-# Who might use this function?
+# Function name: calculate_subtotal
+# Purpose: calculates the subtotal for reservation using the ticket_rate and total_guests
+# Parameters: ticket_rate, total_guests
+# Returns: float subtotal
+# Possible return values: any positive float value
+# Assumptions: n/a?
+# Example call: calculate_subtotal(20.00, 4)
+# Example result: 80.00
+# Who might use this function? Discounts and fees group, final check in group.
 #
 # TODO: After approval, write your two function definitions below.
 def ticket_rate(is_student, is_veteran, age):
@@ -49,3 +49,7 @@ def ticket_rate(is_student, is_veteran, age):
         per_person_rate = 14.00
     return((per_person_rate))
 
+def calculate_subtotal(ticket_rate, reservation_size):
+    for i in range(reservation_size):
+        subtotal += float(ticket_rate)
+    return(subtotal)

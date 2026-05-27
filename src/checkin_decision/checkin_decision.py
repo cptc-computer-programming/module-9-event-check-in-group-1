@@ -18,22 +18,22 @@ This module is your team's workspace for quoted-amount and status-code decisions
 # Function name: calculate_final_amount
 # Purpose: check the total amount to be paid
 # Parameters: subtotal , service fee , discount 
-# Returns: 
-# Possible return values:
+# Returns: final_amount
+# Possible return values: subtotal - (discount_amount + service_fee)
 # Assumptions:
 # Example call:
 # Example result:
-# Who might use this function?
+# Who might use this function? staff
 #
 # Data contract template for Function 2:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
+# Function name: determine_permission_status
+# Purpose: determine if the user can check in
+# Parameters: denied_capacity, ready, long_wait
+# Returns: final_status
+# Possible return values: denied_capacity, ready, long_wait
 # Assumptions:
 # Example call:
 # Example result:
-# Who might use this function?
+# Who might use this function? customer 
 #
 # TODO: After approval, write your two function definitions below.
