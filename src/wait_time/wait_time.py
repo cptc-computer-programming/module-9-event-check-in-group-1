@@ -19,7 +19,7 @@ This module is your team's workspace for wait-time and check-in lane decisions.
 # Purpose: Calculate the wait time in whole minutes
 # Parameters: people_ahead_in_line
 # Returns: estimated_wait_time_in_minutes
-# Possible return values: 10 people = 8 minutes 
+# Possible return values: 8 minutes 
 # Assumptions:
 # Example call:
 # Example result:
@@ -42,8 +42,8 @@ estimated_seconds_per_person = 45
 
 line_limit = 20
 
-def calculate_estimated_wait_time(people_ahead_in_line):
-    total_seconds = people_ahead_in_line * estimated_seconds_per_person
+def calculate_estimated_wait_time(number_ahead_in_queue):
+    total_seconds = number_ahead_in_queue * estimated_seconds_per_person
     minutes = total_seconds // 60
     remainder = total_seconds % 60
 
@@ -52,8 +52,8 @@ def calculate_estimated_wait_time(people_ahead_in_line):
 
     return minutes
 
-def determine_check_in_lane(priority_status, people_ahead_in_line):
-    if priority_status or people_ahead_in_line > line_limit:
+def determine_check_in_lane(priority_status, number_ahead_in_queue):
+    if priority_status or number_ahead_in_queue > line_limit:
         return "Priority Lane"
     else:
         return "Standard Lane"
