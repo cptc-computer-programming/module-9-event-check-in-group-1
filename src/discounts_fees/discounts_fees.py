@@ -36,10 +36,8 @@ def service_fee(is_online, subtotal):
 
     if is_online:
        service_fee_percent = IS_ONLINE_FEE
-       returned_service_fee = subtotal * service_fee_percent
-    else:
-        returned_service_fee = subtotal * service_fee_percent
 
+    returned_service_fee = subtotal * service_fee_percent
 
     return(returned_service_fee)
 
@@ -69,12 +67,11 @@ def discount_amount(total_guests_in_reservation, subtotal):
 
     if total_guests_in_reservation >= OVER_TEN_LIMIT:
         discount_percentage = GROUP_OVER_TEN_DISCOUNT
-        returned_discount_amount = subtotal * discount_percentage
+
     elif total_guests_in_reservation > OVER_FIVE_LIMIT:
         discount_percentage = GROUP_OVER_FIVE_DISCOUNT
-        returned_discount_amount = subtotal * discount_percentage
-    else:
-        returned_discount_amount = subtotal * discount_percentage
+
+    returned_discount_amount = subtotal * discount_percentage
 
     return(returned_discount_amount)
 
