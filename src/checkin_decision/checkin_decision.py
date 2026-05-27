@@ -46,16 +46,17 @@ def calculate_total_amount(subtotal, discount , service_fee):
     return final_amount
 
 
-def determine_permission_status(checking_permission , ready , long_wait):
+def determine_permission_status(check_in_permitted, wait_time):
     """This determines the final status of if the customer can check in"""
-    if checking_permission == False:
+    if not check_in_permitted:
         return("DENIED_CAPACITY")
     
     short_wait = 15
 
-    if long_wait > short_wait:
+    if wait_time > short_wait:
         return("LONG_WAIT")
-
+    else:
+        return("READY")
 
 
 
