@@ -15,22 +15,22 @@ This module is your team's workspace for wait-time and check-in lane decisions.
 # 5. Get instructor approval for both contracts.
 #
 # Data contract template for Function 1:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
+# Function name: calculate_estimated_wait_time
+# Purpose: Calculate the wait time in whole minutes
+# Parameters: people_ahead_in_line
+# Returns: estimated_wait_time_in_minutes
+# Possible return values: 10 people = 450 seconds
 # Assumptions:
 # Example call:
 # Example result:
 # Who might use this function?
 #
 # Data contract template for Function 2:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
+# Function name: determine_check_in_lane
+# Purpose: Get the check in lane the reservation should use
+# Parameters: priority_status, is_event
+# Returns: check_in_lane
+# Possible return values: Priority Lane, Standard Lane
 # Assumptions:
 # Example call:
 # Example result:
