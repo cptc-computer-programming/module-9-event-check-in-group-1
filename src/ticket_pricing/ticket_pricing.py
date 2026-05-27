@@ -37,3 +37,15 @@ This module is your team's workspace for ticket-rate and reservation-subtotal wo
 # Who might use this function?
 #
 # TODO: After approval, write your two function definitions below.
+def ticket_rate(is_student, is_veteran, has_priority, age):
+    per_person_rate = 20.00
+    if age <= 12:
+        per_person_rate = 8.00
+    elif age >= 65:
+        per_person_rate = 10.00
+    elif is_student:
+        per_person_rate = 12.00
+    elif is_veteran:
+        per_person_rate = 14.00
+    return((per_person_rate))
+
