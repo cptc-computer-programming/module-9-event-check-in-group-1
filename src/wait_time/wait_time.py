@@ -19,7 +19,7 @@ This module is your team's workspace for wait-time and check-in lane decisions.
 # Purpose: Calculate the wait time in whole minutes
 # Parameters: people_ahead_in_line
 # Returns: estimated_wait_time_in_minutes
-# Possible return values: 10 people = 450 seconds
+# Possible return values: 10 people = 8 minutes 
 # Assumptions:
 # Example call:
 # Example result:
@@ -28,7 +28,7 @@ This module is your team's workspace for wait-time and check-in lane decisions.
 # Data contract template for Function 2:
 # Function name: determine_check_in_lane
 # Purpose: Get the check in lane the reservation should use
-# Parameters: priority_status, is_event
+# Parameters: priority_status, line_limit (20)
 # Returns: check_in_lane
 # Possible return values: Priority Lane, Standard Lane
 # Assumptions:
@@ -37,3 +37,23 @@ This module is your team's workspace for wait-time and check-in lane decisions.
 # Who might use this function?
 #
 # TODO: After approval, write your two function definitions below.
+
+estimated_seconds_per_person = 45
+
+line_limit = 20
+
+def calculate_estimated_wait_time(people_ahead_in_line):
+    total_seconds = people_ahead_in_line * estimated_seconds_per_person
+    minutes = total_seconds // 60
+    remainder = total_seconds % 60
+
+    if remainder > 0:
+        minutes += 1
+
+    return minutes
+
+def determine_check_in_lane(priority_status, people_ahead_in_line):
+    if priority_status or people_ahead_in_line > line_limit:
+        return "Priority Lane"
+    else:
+        return "Standard Lane"
