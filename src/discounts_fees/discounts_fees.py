@@ -23,7 +23,7 @@ This module is your team's workspace for discount and service-fee calculations.
 # Assumptions:
 # Example call:
 # Example result:
-# Who might use this function?
+# Who might use this function? The team for Final Check-In Decision
 #
 # Data contract template for Function 2:
 # Function name: discount_amount
@@ -34,6 +34,6 @@ This module is your team's workspace for discount and service-fee calculations.
 # Assumptions:
 # Example call:
 # Example result:
-# Who might use this function?
+# Who might use this function? The team for Final Check-In Decision
 #
 # TODO: After approval, write your two function definitions below.
