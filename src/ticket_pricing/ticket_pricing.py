@@ -15,14 +15,14 @@ This module is your team's workspace for ticket-rate and reservation-subtotal wo
 # 5. Get instructor approval for both contracts.
 #
 # Data contract template for Function 1:
-# Function name:
-# Purpose:
-# Parameters:
-# Returns:
-# Possible return values:
+# Function name: ticket_rate
+# Purpose: determine price per person
+# Parameters: is_stuednt, is_veteran, age
+# Returns: per_person_rate
+# Possible return values: 20,8,10,12,14
 # Assumptions:
-# Example call:
-# Example result:
+# Example call: ticket_rate(true, true, 11)
+# Example result: 8.00
 # Who might use this function?
 #
 # Data contract template for Function 2:
@@ -37,7 +37,7 @@ This module is your team's workspace for ticket-rate and reservation-subtotal wo
 # Who might use this function?
 #
 # TODO: After approval, write your two function definitions below.
-def ticket_rate(is_student, is_veteran, has_priority, age):
+def ticket_rate(is_student, is_veteran, age):
     per_person_rate = 20.00
     if age <= 12:
         per_person_rate = 8.00
